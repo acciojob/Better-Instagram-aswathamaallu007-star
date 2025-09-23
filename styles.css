@@ -57,6 +57,9 @@ div.container {
 p {
   text-align: center;
 }
+.image{
+	cursor : pointer;
+}
 
 button {
   margin: 20px;
