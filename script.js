@@ -4,9 +4,14 @@ let draggedimage = null
 allimage.forEach(image =>{
 	image.addEventListener('dragstart',(e)=>{
 		draggedimage = e.target;
+		e.target.classList.add('dragging')
 		e.dataTransfer.setData('img',e.target.id)
 		
 	});
+	  image.addEventListener('dragend', (e) => {
+          e.target.classList.remove('dragging');
+        });
+	
 	image.addEventListener('dragover',(e)=>{
 		e.preventDefault();
 	});
